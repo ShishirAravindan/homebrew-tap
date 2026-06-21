@@ -7,7 +7,7 @@ cask "uttr" do
   desc "macOS speech-to-text utility powered by Parakeet on the Neural Engine"
   homepage "https://github.com/ShishirAravindan/uttr"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "uttr.app"
 
