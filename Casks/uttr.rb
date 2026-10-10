@@ -1,6 +1,6 @@
 cask "uttr" do
-  version "0.1.9"
-  sha256 "2716a543da58c527431d5fba4d9b931ed894d616975a3444db5eaa3365487138"
+  version "0.1.10"
+  sha256 "8fbc1300f3d4fca7ae6cbee03f1903ac356c74a3c1098c9a81de024db6b47d89"
 
   url "https://github.com/ShishirAravindan/uttr/releases/download/v#{version}/uttr.zip"
   name "Uttr"
