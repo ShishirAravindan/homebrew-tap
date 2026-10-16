@@ -11,6 +11,8 @@ cask "uttr" do
 
   app "uttr.app"
 
+  uninstall quit: "io.github.Rakk301.uttr"
+
   zap trash: [
     "~/Library/Application Support/uttr",
   ]
@@ -22,5 +24,8 @@ cask "uttr" do
     Grant these permissions when prompted:
       - Microphone access (for speech recording)
       - Accessibility access (for global hotkey and paste-at-cursor)
+
+    Upgrading or uninstalling quits uttr first. Reopen it from
+    Applications after `brew upgrade`.
   EOS
 end
