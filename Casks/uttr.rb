@@ -11,10 +11,11 @@ cask "uttr" do
 
   app "uttr.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args:         ["-dr", "com.apple.quarantine", "#{appdir}/uttr.app"],
-                   must_succeed: false
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/uttr.app"],
+        must_succeed:   false,
+        writable_paths: ["{{appdir}}/uttr.app"]
   end
 
   uninstall quit: "io.github.Rakk301.uttr"
