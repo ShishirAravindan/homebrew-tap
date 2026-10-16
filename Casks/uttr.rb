@@ -11,6 +11,10 @@ cask "uttr" do
 
   app "uttr.app"
 
+  zap trash: [
+    "~/Library/Application Support/uttr",
+  ]
+
   caveats <<~EOS
     On first launch, you may need to allow the app in:
       System Settings → Privacy & Security → Open Anyway
@@ -19,8 +23,4 @@ cask "uttr" do
       - Microphone access (for speech recording)
       - Accessibility access (for global hotkey and paste-at-cursor)
   EOS
-
-  zap trash: [
-    "~/Library/Application Support/uttr",
-  ]
 end
