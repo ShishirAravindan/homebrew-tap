@@ -11,6 +11,12 @@ cask "uttr" do
 
   app "uttr.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args:         ["-dr", "com.apple.quarantine", "#{appdir}/uttr.app"],
+                   must_succeed: false
+  end
+
   uninstall quit: "io.github.Rakk301.uttr"
 
   zap trash: [
@@ -23,7 +29,9 @@ cask "uttr" do
   ]
 
   caveats <<~EOS
-    On first launch, you may need to allow the app in:
+    Homebrew removed the macOS quarantine flag from uttr.app, so it
+    should open without the Open Anyway step. If macOS still blocks it,
+    allow it in:
       System Settings → Privacy & Security → Open Anyway
 
     Grant these permissions when prompted:
