@@ -4,7 +4,7 @@ cask "uttr" do
 
   url "https://github.com/ShishirAravindan/uttr/releases/download/v#{version}/uttr.zip"
   name "Uttr"
-  desc "macOS speech-to-text utility powered by Parakeet on the Neural Engine"
+  desc "Speech-to-text utility powered by Parakeet on the Neural Engine"
   homepage "https://github.com/ShishirAravindan/uttr"
 
   depends_on macos: :sonoma
